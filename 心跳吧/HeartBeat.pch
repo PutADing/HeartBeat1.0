@@ -1,0 +1,106 @@
+//
+//  HeartBeat.pch
+//  HeartBeat1.0
+//
+//  Created by 蒋宽 on 15/3/22.
+//  Copyright (c) 2015年 蒋宽. All rights reserved.
+//
+
+#ifndef HeartBeat1_0_HeartBeat_pch
+#define HeartBeat1_0_HeartBeat_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//#import <Foundation/Foundation.h>
+//#import <UIKit/UIKit.h>
+
+//临时定义一个appToken值
+#define APPTOKEN @"111111"
+//定义appType 0为安卓版心跳吧 1为iOS版心跳吧 2为小应用
+#define APPTYPE @"1"
+
+#define NAVIGATIOINBARHEIGHT ([[UIApplication sharedApplication] statusBarFrame].size.height + self.navigationController.navigationBar.frame.size.height)
+
+//背景颜色 灰
+#define BACKGROUNGCOLOR_GRAY1 [UIColor colorWithRed:235.0f/255 green:235.0f/255 blue:235.0f/255 alpha:1.0f]
+//APP主调颜色 蓝
+#define COLOR_BLUE1 [UIColor colorWithRed:30.0f/255 green:179.0f/255 blue:229.0f/255 alpha:1.0f]
+//绿 红 灰 黑 白
+#define COLOR_GREEN1 [UIColor greenColor]
+#define COLOR_RED1 [UIColor redColor]
+#define COLOR_GRAY1 [UIColor grayColor]
+#define COLOR_BLACK1 [UIColor blackColor]
+#define COLOR_WHITE1 [UIColor whiteColor]
+//灰色 竖线
+#define COLOR_GRAY_CALAYER [UIColor colorWithRed:231.0f/255 green:231.0f/255 blue:231.0f/255 alpha:1.0f].CGColor
+
+//字体大小
+#define FONT_20 [UIFont systemFontOfSize:20]
+#define FONT_17 [UIFont systemFontOfSize:17]
+#define FONT_15 [UIFont systemFontOfSize:15]
+
+//默认头像图片
+#define DEFAULT_HEADIMAGE [UIImage imageNamed:@"AKL.jpg"]
+
+//获取用户信息
+#define APIKEY [[NSUserDefaults standardUserDefaults]objectForKey:@"apiKey"]
+#define AVATAR [[NSUserDefaults standardUserDefaults] objectForKey:@"avatar"]
+#define HEARTBEATNUMBER [[NSUserDefaults standardUserDefaults] objectForKey:@"heartbeatNumber"]
+#define LEVEL [[NSUserDefaults standardUserDefaults] objectForKey:@"level"]
+#define NICKNAME [[NSUserDefaults standardUserDefaults] objectForKey:@"nickName"]
+#define PERSONALIZEDSIGNATURE [[NSUserDefaults standardUserDefaults] objectForKey:@"personalizedSignature"]
+#define REGISTERDATE [[NSUserDefaults standardUserDefaults] objectForKey:@"registerDate"]
+#define USERID [[NSUserDefaults standardUserDefaults] integerForKey:@"userId"]
+#define APPSECRET [[NSUserDefaults standardUserDefaults] objectForKey:@"appSecret"]
+#define PHONENUMBER [[NSUserDefaults standardUserDefaults] objectForKey:@"phoneNumber"]
+#define GENDER [[NSUserDefaults standardUserDefaults] objectForKey:@"gender"]
+
+//设备序列号
+#define CLIENTID [[NSUserDefaults standardUserDefaults] objectForKey:@"clientId"]
+
+//心跳吧shareSDK的appKey：64cb5b4bc310
+//
+//新浪微博AppKey：1232104415
+//AppSecret：846ac3205aa9baa0d09bb1648bf1b322
+//
+//QQ的APP ID:1104131050
+//APP KEY:COOKuQFtDGMVI3Np
+//
+//
+//微信的AppID：wxef10489ea8963163
+//AppSecret：7a062a681e1e66a3b61c28226621086a
+
+//阿里云OSS
+#define ALIYUNOSS_ACCESSKEY @"Z8O2jTCCf3obWgfZ"
+#define ALIYUNOSS_SECRETKEY @"tTRdEbr4622LakuHYJA4kmkK6vYAib"
+#define ALIYUNOSS_HOSTID @"oss-cn-hangzhou.aliyuncs.com"
+//@"heartbeat-avatar"
+#define ALIYUNOSS_BUCKET_AVATAR @"test-upload-image"
+//@"heartbeat-goods"
+#define ALIYUNOSS_BUCKET_GOODS @"test-upload-image"
+//accessKey = "Z8O2jTCCf3obWgfZ";
+//screctKey = "tTRdEbr4622LakuHYJA4kmkK6vYAib";
+//全局默认数据中心域名:oss-cn-hangzhou.aliyuncs.com
+//现在有两个BUCKET:
+//上传头像的bucket:  heartbeat-avatar
+//上传物品的bucket:  heartbeat-goods
+//上传文件命名规范:
+//fileName = "HeartBeat_"+timeStamp+"_"+imageCount+"_"+userId+"."+type;
+
+
+//个推
+//APPID   a0vIGIAnXh7HFJtaRi3k56
+//APPKEY   LkOKyPWsiD79fFTok2tX09
+//APPSECRET  VwWT5RqDCo9h0jkAis9LY6
+//MASTERSECRET:  fUVKXD1Uqg7ZCFfc5laaf7
+#define kAppId           @"a0vIGIAnXh7HFJtaRi3k56"
+#define kAppKey          @"LkOKyPWsiD79fFTok2tX09"
+#define kAppSecret       @"VwWT5RqDCo9h0jkAis9LY6"
+
+
+//心跳吧后台地址   //IP: 121.40.182.96  帐号：root  密码：bfa05fac   上线地址//@"http://121.40.182.96:8080/xt8/"     本地服务器地址@"http://192.168.1.35:8080/xt8/"
+#define HBURL @"http://121.40.182.96:8090/xt8/"
+
+
+#endif
